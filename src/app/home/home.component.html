@@ -1,0 +1,13 @@
+<div class="sign">
+  <h2>Welcome!</h2>
+</div>
+<div *ngIf="popularVideos">
+    <div *ngFor="let video of popularVideos; let i = index">
+      <div class="video-container" *ngIf="i % 2 === 0">
+        <div *ngFor="let colVideo of popularVideos.slice(i, i + 2)" class="video-item">
+          <iframe width="480" height="250" [src]="colVideo.safeUrl" frameborder="0" allowfullscreen></iframe>
+          <p class="video-title" [innerHTML]="colVideo.snippet.title"></p>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="search-container">
+  <input [(ngModel)]="searchTerm" placeholder="Search..." class="search-input">
+  <button (click)="search()" class="search-button">Search</button>
+</div>
+
+<div *ngIf="videos">
+  <div *ngFor="let video of videos; let i = index">
+    <div class="video-container" *ngIf="i % 2 === 0">
+      <div *ngFor="let colVideo of videos.slice(i, i + 2); let j = index" class="video-item">
+        <iframe width="480" height="250" [src]="colVideo.safeUrl" frameborder="0" allowfullscreen></iframe>
+        <p class="video-title" [innerHTML]="colVideo.snippet.title"></p>
+      </div>
+    </div>
+  </div>
+</div>

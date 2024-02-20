@@ -1,0 +1,24 @@
+.sign h2 {
+    margin: 20px;
+    text-align: center;
+}
+
+.video-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 90px;
+}
+  
+.video-item {
+    flex: 0 85%;
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
+}
+  
+.video-title {
+    margin-top: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}  
